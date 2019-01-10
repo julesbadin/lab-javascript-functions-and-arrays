@@ -102,9 +102,9 @@ function averageWordLength(fff) {
 averageWordLength(wordsArr);
 
 
-}
 
 // Unique Arrays
+
 var wordsUnique = [
   'crab',
   'poison',
@@ -119,6 +119,27 @@ var wordsUnique = [
   'bring'
 ];
 
+function uniquifyArray(arr) {
+  var newArr = [];
+
+  if (arr.length === 0) {
+    return undefined;
+  }
+
+  for (var i = 0; i < arr.length; i++) {
+
+    if (newArr.includes(arr[i]) === false) {
+
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+};
+
+console.log(uniquifyArray(wordsUnique));
+
+
+
 // Finding Elements
 var wordsFind = [
   'machine',
@@ -130,6 +151,19 @@ var wordsFind = [
   'truth',
   'disobedience'
 ];
+
+
+function doesWordExist(wordsArr, word) {
+  var exist = false;
+  for (var i = 0; i < wordsArr.length; i++) {
+    if (wordsArr[i] === word) {
+      exist = true;
+    }
+  }
+  return exist;
+}
+
+console.log(doesWordExist(wordsFind, "machine"));
 
 // Counting Repetion
 var wordsCount = [
@@ -145,6 +179,23 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+
+
+function howManyTimes(wordsArr, word) {
+
+  var sum = 0;
+
+  if (wordsArr.length === 0) {
+    return false;
+  }
+
+  for (i = 0; i < wordsArr.length; i += 1) {
+    if (wordsArr[i] === word) {
+      sum += 1;
+    }
+  }
+  return sum;
+};
 // Bonus Quest
 
 var matrix = [
